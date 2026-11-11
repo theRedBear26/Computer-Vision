@@ -1,294 +1,191 @@
-# Computer Vision Journey
+Civil Engineering x Computer Vision (CECV)
+Applying Computer Vision and Deep Learning to Real-World Engineering Problems
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv&logoColor=white)](https://opencv.org/)
-[![NumPy](https://img.shields.io/badge/NumPy-Scientific%20Computing-013243?logo=numpy&logoColor=white)](https://numpy.org/)
-[![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen)]()
-
-A hands-on repository documenting my journey into **Computer Vision**,
-from image processing fundamentals with OpenCV to classical computer
-vision, deep learning, and real-world visual AI applications.
+I'm a Civil Engineer with a growing interest in Artificial Intelligence, particularly Computer Vision and Deep Learning. I started this project to explore how the skills I'm learning in AI can be applied to problems in civil engineering and construction.
 
-My goal is to understand how computers interpret images and videos,
-build practical projects, and develop the engineering skills needed to
-contribute to useful computer vision systems.
-
-> Learning in public: this repository will grow as I study, experiment,
-> build projects, and improve my implementations.
-
-------------------------------------------------------------------------
-
-## About this repository
-
-This is both a learning notebook and a practical project portfolio. It
-contains code, experiments, explanations, and projects covering:
-
--   Image loading, displaying, saving, and manipulation
--   Image transformations and geometric operations
--   Color spaces, thresholding, and image filtering
--   Edges, contours, and shape analysis
--   Feature detection and matching
--   Object detection, tracking, and video processing
--   Deep learning for image classification and object detection
--   Practical applications of computer vision
-
-The code is organized by topic so that learners and reviewers can follow
-the progression from fundamentals to more advanced methods.
-
-## Technology stack
-
-  -----------------------------------------------------------------------
-  Technology                          How I use it
-  ----------------------------------- -----------------------------------
-  Python                              Main programming language
-
-  OpenCV                              Image processing, video processing,
-                                      and classical computer vision
-
-  NumPy                               Image arrays and numerical
-                                      operations
-
-  Matplotlib                          Visualization and analysis
-
-  PyTorch                             Deep learning experiments (as
-                                      introduced)
-
-  Ultralytics YOLO                    Object detection experiments (as
-                                      introduced)
-
-  Git and GitHub                      Version control and project
-                                      documentation
-  -----------------------------------------------------------------------
-
-*The tools listed here describe the technologies used or planned for
-this learning path; individual project folders document their actual
-dependencies.*
-
-## Repository structure
-
-``` text
-computer-vision/
-├── resources/
-│   ├── photos/
-│   └── videos/
-├── 01_opencv_basics/
-├── 02_image_processing/
-├── 03_classical_computer_vision/
-├── 04_video_processing/
-├── 05_feature_detection/
-├── 06_deep_learning/
-├── projects/
-├── notebooks/
-├── requirements.txt
-└── README.md
-```
+Most of my projects focus on areas such as construction site safety, structural inspection, and construction progress monitoring. I wanted to work on problems that connect my engineering background with my interest in programming and machine learning.
 
-The folder names are a suggested organization. I will update this tree
-to match the actual contents of the repository as it develops.
-
-## Learning roadmap
-
-### 1. OpenCV fundamentals
+This repository contains my practical experiments, projects, and implementations as I continue developing my skills in this field.
 
--   Read, display, and save images
--   Understand image dimensions, channels, and pixel values
--   Work with image regions and resizing
--   Draw shapes, lines, and text
--   Capture and process video
--   Handle mouse and keyboard events
+🏗️ Civil Engineering Applications
+1. Construction Site Safety – PPE Detection
 
-### 2. Image processing
+File: construction_Site_Safety_(PPE Detection).py
 
--   Color spaces: BGR, RGB, HSV, and grayscale
--   Image thresholding: global, Otsu, and adaptive
--   Smoothing and filtering
--   Image gradients and edge detection
--   Morphological operations: erosion, dilation, opening, and closing
--   Histograms and contrast enhancement
+Technologies: Python, YOLOv8, OpenCV
 
-### 3. Classical computer vision
+Construction site safety is an important part of civil engineering. Workers are required to wear appropriate personal protective equipment (PPE), but manually checking every worker can be difficult, especially on large construction sites.
 
--   Contours and connected components
--   Shape measurements and moments
--   Convex hulls and shape matching
--   Hough line and circle detection
--   Template matching
--   Corner and feature detection
--   Feature description and matching: SIFT, ORB, and AKAZE
+In this project, I used YOLOv8 to detect objects in a construction site image. The program identifies objects and displays the detection results using bounding boxes.
 
-### 4. Video and motion
+My goal with this project was to understand how object detection could be used as a starting point for automated PPE monitoring.
 
--   Video capture and frame processing
--   Background subtraction
--   Object tracking
--   Optical flow
--   Motion detection
+2. Infrastructure Inspection – Crack Segmentation
 
-### 5. Deep learning for computer vision
+File: Infrastructure_Inspection_(Crack_Segmentation).py
 
--   Neural network fundamentals
--   Convolutional neural networks (CNNs)
--   Image classification
--   Object detection
--   Image segmentation
--   Transfer learning and fine-tuning
--   Model evaluation and error analysis
+Technologies: Python, PyTorch, U-Net
 
-### 6. Deployment and real-world applications
+Cracks in concrete structures can be early signs of deterioration. Identifying and measuring them is important when assessing the condition of infrastructure.
 
--   Build reusable Python modules
--   Create APIs for inference
--   Process images and video efficiently
--   Test models on real-world data
--   Document limitations, performance, and responsible use
+For this project, I implemented a U-Net architecture using PyTorch to explore semantic segmentation for crack detection.
 
-## Projects
+Unlike object detection, which identifies an object using a bounding box, segmentation aims to identify the individual pixels belonging to a crack.
 
-Projects will be added here as they become functional and documented.
+I chose this approach because it can provide more detailed information about the location and shape of visible cracks.
 
-  -----------------------------------------------------------------------
-  Project                 Description             Status
-  ----------------------- ----------------------- -----------------------
-  OpenCV fundamentals     Experiments with image  In progress
-                          loading, display,       
-                          drawing, and            
-                          interaction             
+3. Construction Progress Tracking – Transfer Learning
 
-  Image processing        Reusable examples of    Planned
-  toolkit                 filtering,              
-                          thresholding, and       
-                          morphology              
+File: Construction_Progress_Tracking_(Transfer_Learning).py
 
-  Shape and contour       Detect and measure      Planned
-  analysis                shapes in images        
+Technologies: Python, TensorFlow, MobileNetV2
 
-  Feature matching        Match visual features   Planned
-                          between images          
+Keeping track of construction progress is essential for project planning and management. Site inspections and progress reporting can take considerable time.
 
-  Object detection        Detect and localize     Planned
-                          objects in images or    
-                          video                   
+In this project, I explored image classification using transfer learning with MobileNetV2.
 
-  Real-world CV           A complete application  Planned
-  application             built around a clearly  
-                          defined problem         
-  -----------------------------------------------------------------------
+The idea is to classify construction site images into different categories representing construction activities or stages, such as earthworks, framing, and heavy machinery.
 
-For each completed project, I aim to include its objective, sample
-inputs and outputs, setup instructions, implementation details, and
-known limitations.
+This project helped me understand how pretrained deep learning models can be adapted to engineering-related image classification tasks.
 
-## Getting started
+4. Capstone Project – Concrete Crack Detection
 
-### Requirements
+Files:
 
--   Python 3.9 or newer
--   pip
--   Git
+Concrete_Crack_Detection.py
+Capstone_Deployed_System_(Streamlit).py
 
-### 1. Clone the repository
+Technologies: Python, TensorFlow, CNN, Streamlit
 
-``` bash
-git clone https://github.com/YOUR_USERNAME/computer-vision.git
-cd computer-vision
-```
+This is one of the projects where I brought together model development and application deployment.
 
-Replace `YOUR_USERNAME` with your GitHub username and adjust the
-repository URL if your repository has a different name.
+I developed a CNN-based approach for concrete crack classification and created a Streamlit application that allows users to upload an image and receive a model prediction.
 
-### 2. Create a virtual environment
+The purpose was to go beyond training a model in a notebook and understand how a machine learning model can be made accessible through a simple web application.
 
-Linux / macOS:
+🧠 Deep Learning Implementations from Scratch
 
-``` bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
+Alongside my engineering-related projects, I have been studying how neural networks and modern deep learning architectures work internally.
 
-Windows:
+I included these implementations to strengthen my understanding of the mathematics and concepts behind deep learning.
 
-``` powershell
-python -m venv .venv
-.venv\Scripts\activate
-```
+Neural Network from Scratch
 
-### 3. Install dependencies
+Files:
 
-``` bash
-python -m pip install --upgrade pip
-pip install opencv-python numpy matplotlib
-```
+Neural_Network_from_Scratch.py
+Neural_Network_from_Scratch_(NumPy).py
 
-If a `requirements.txt` file is maintained for a particular project,
-install its dependencies with:
+Implemented the basic components of a neural network using NumPy, including:
 
-``` bash
-pip install -r requirements.txt
-```
+Forward propagation
+Backpropagation
+Chain rule and gradient calculations
+Gradient descent
 
-### 4. Run an example
+I experimented with training the network on the XOR problem and the 8×8 digits dataset.
 
-``` python
-import cv2
+Transformer from Scratch
 
-image = cv2.imread("resources/photos/example.jpg")
+File: Transformer_from_Scratch_in_PyTorch.py
 
-if image is None:
-    raise FileNotFoundError("Could not load the image. Check the file path.")
+Technology: PyTorch
 
-cv2.imshow("Computer Vision", image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-```
+Implemented a Transformer Encoder architecture to understand the main components behind the Transformer model.
 
-Use an image that exists at the path you provide. GUI display may
-require a desktop environment; for notebooks or headless systems, use an
-appropriate display method instead.
+The implementation covers:
 
-## How I approach each project
+Positional encoding
+Multi-head self-attention
+Transformer encoder components
+Sequence reversal as a training task
+Mini GPT – Character-Level Language Model
 
-For each substantial project, I aim to document:
+File: Mini_GPT_(Character-Level).py
 
-1.  **Problem:** What visual task am I trying to solve?
-2.  **Data:** Where do the images or videos come from, and what are
-    their limitations?
-3.  **Method:** Which image-processing or machine-learning techniques
-    are used?
-4.  **Implementation:** How is the solution structured?
-5.  **Evaluation:** How well does it work, and how was that measured?
-6.  **Limitations:** Where does it fail, and what should be improved?
+Technology: PyTorch
 
-I believe a good computer vision project should demonstrate not only
-that a model runs, but also that the problem, data, evaluation, and
-limitations are understood.
+A small character-level language model based on the GPT architecture.
 
-## Current focus
+This project helped me explore causal self-attention, masked attention, token sequences, and autoregressive text generation.
 
-I am strengthening my foundations in Python, NumPy, and OpenCV, with a
-focus on understanding image processing and classical computer vision
-before moving deeper into neural networks and modern detection models.
+💻 Computer Vision and Machine Learning Fundamentals
 
-I am especially interested in applying computer vision to practical
-challenges in areas such as:
+I also included smaller projects that helped me build a foundation in computer vision and machine learning.
 
--   Agriculture and crop monitoring
--   Coffee quality inspection
--   Manufacturing and visual quality control
--   Transportation and traffic analysis
--   Healthcare research and medical imaging
+Project	Description
+Linear_Regression_from_Scratch.py	Implements linear regression using gradient descent and NumPy, including loss visualization.
+detecting_mouseclick.py	Uses OpenCV mouse events to select points and perform perspective transformation on an image.
+how_tocrate_black_images_colored_images_shapes_and_text.py	Explores basic OpenCV operations, including image creation, drawing shapes, and adding text.
+🛠️ Technologies and Tools
+Programming: Python, NumPy
+Deep Learning: PyTorch, TensorFlow
+Computer Vision: OpenCV
+Object Detection: Ultralytics YOLOv8
+Web Application: Streamlit
+Machine Learning: CNNs, U-Net, Transfer Learning, Transformers
+Development: Git, GitHub
+🚀 Running the Projects Locally
+1. Clone the repository
+bash
+git clone https://github.com/theRedBear26/Computer-Vision.git
+cd Computer-Vision
 
-These are areas of interest, not claims of deployed products or
-validated solutions.
+2. Create a virtual environment
+bash
+python -m venv venv
 
-## Connect
 
-I welcome feedback, learning resources, collaboration, and opportunities
-to contribute to computer vision and AI projects.
+Activate it:
 
--   **GitHub:** https://github.com/theRedBear26
--   **Email:** yilakbelayineh695@gmail.com
+Windows
 
-------------------------------------------------------------------------
+bash
+venv\Scripts\activate
 
-⭐ If you find this learning repository useful, feel free to star it or
-share suggestions. Thank you for following my computer vision journey!
+
+Linux / macOS
+
+bash
+source venv/bin/activate
+
+3. Install dependencies
+
+Install the libraries required by the particular project:
+
+bash
+pip install numpy opencv-python torch torchvision tensorflow streamlit ultralytics matplotlib
+
+4. Run a project
+
+For example:
+
+bash
+python "construction_Site_Safety_(PPE Detection).py"
+
+
+For the Streamlit application:
+
+bash
+streamlit run "Capstone_Deployed_System_(Streamlit).py"
+
+
+Note: Some projects may require additional datasets, image files, or model weights. Check the individual scripts before running them.
+
+🎯 What I'm Working Towards
+
+My long-term goal is to develop my skills at the intersection of civil engineering, computer vision, and artificial intelligence.
+
+I'm particularly interested in exploring how AI can support:
+
+Structural condition assessment and defect detection.
+Construction site monitoring and safety.
+Infrastructure inspection.
+Construction progress monitoring.
+Data-driven engineering decisions.
+
+I'm still learning, experimenting, and improving my implementations. This repository represents part of that journey.
+
+I'm open to internship opportunities where I can contribute my civil engineering knowledge, develop my programming skills, learn from experienced engineers and developers, and work on practical problems.
+
+Thank you for taking the time to look through my work!
